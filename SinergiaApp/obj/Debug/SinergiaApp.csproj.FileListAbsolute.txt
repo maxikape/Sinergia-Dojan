@@ -1,0 +1,15 @@
+C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\bin\Debug\SinergiaApp.exe.config
+C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\bin\Debug\SinergiaApp.exe
+C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\bin\Debug\SinergiaApp.pdb
+C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\obj\Debug\SinergiaApp.Form1.resources
+C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\obj\Debug\SinergiaApp.FrmAdmin.resources
+C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\obj\Debug\SinergiaApp.FrmEditarAlumno.resources
+C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\obj\Debug\SinergiaApp.FrmFichaAlumno.resources
+C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\obj\Debug\SinergiaApp.FrmNuevoAlumno.resources
+C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\obj\Debug\SinergiaApp.FrmTarjeta.resources
+C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\obj\Debug\SinergiaApp.Properties.Resources.resources
+C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\obj\Debug\SinergiaApp.csproj.GenerateResource.cache
+C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\obj\Debug\SinergiaApp.csproj.CoreCompileInputs.cache
+C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\obj\Debug\SinergiaApp.exe
+C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\obj\Debug\SinergiaApp.pdb
+C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\obj\Debug\SinergiaApp.csproj.AssemblyReference.cache
