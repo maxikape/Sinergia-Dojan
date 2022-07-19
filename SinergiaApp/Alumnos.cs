@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
 namespace SinergiaApp
 {
@@ -19,8 +15,11 @@ namespace SinergiaApp
         public int Estado { get; set; }
         public int Asistencias { get; set; }
         public int Pago { get; set; }
+        public byte Foto { get; set; }
+        public int FichaMedica { get; set; }
+        public int Carnet { get; set; }
 
-       
+
 
 
     }

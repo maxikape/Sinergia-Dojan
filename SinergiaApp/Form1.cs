@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SinergiaApp
@@ -23,6 +16,8 @@ namespace SinergiaApp
             //}
 
         }
+
+        Validaciones validar = new Validaciones();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -45,11 +40,18 @@ namespace SinergiaApp
             frm.ShowDialog();
         }
 
+        private void ValidarCampos()
+        {
+            var vr = !string.IsNullOrEmpty(txtNumAlumno.Text);
+            btnConfirmar.Enabled = vr;
+
+        }
+
 
         //public string Substring(int startIndex, int length)
         //{
         //    string fechaActual = DateTime.Now.Date.ToString();
-            
+
         //    // recupero el numero de alumno del textbox
         //    //int valor2 = Convert.ToInt32(txtNumAlumno.Text);
         //    SinergiaDB Osine = new SinergiaDB();
@@ -68,24 +70,43 @@ namespace SinergiaApp
             //{
             //    this.Close();
             //}
+            btnConfirmar.Enabled = false;
+            
         }
 
         //al presionar entre abrir el formulario del alumo
 
+
+
         private void txtNumAlumno_KeyPress(object sender, KeyPressEventArgs e)
         {
+            var s = string.IsNullOrEmpty(txtNumAlumno.Text);
 
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            if (e.KeyChar == Convert.ToChar(Keys.Enter) && txtNumAlumno.Text == "")
             {
+
+
+                MessageBox.Show("Precione la tecla enter e ingrese su numero de alumno");
+
+
+            }
+
+
+            else if (e.KeyChar == Convert.ToChar(Keys.Enter) )
+            {
+
+
                 FrmFichaAlumno frm = new FrmFichaAlumno(Convert.ToInt32(txtNumAlumno.Text));
                 //Substring(0, 2);
                 frm.ShowDialog();
+
+
             }
         }
 
         private void txtNumAlumno_TextChanged(object sender, EventArgs e)
         {
-
+            ValidarCampos();
         }
 
 

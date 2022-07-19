@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
-using System.Data;
-using System.Xml;
 
 namespace SinergiaApp
 {
@@ -59,7 +54,12 @@ namespace SinergiaApp
                         Oalumnos.Asistencias = reader.GetInt32(8);
                         Oalumnos.Pago = reader.GetInt32(9);
                         Oalumnos.NumeroAlumno = reader.GetInt32(10);
-                        
+                        //Oalumnos.Foto = reader.GetInt32(11);
+                        Oalumnos.FichaMedica = reader.GetInt32(12);
+                        Oalumnos.Carnet = reader.GetInt32(11);
+
+
+
 
                         alumnos.Add(Oalumnos);
 
@@ -79,10 +79,10 @@ namespace SinergiaApp
             return alumnos;
         }
 
-        public void Add(string Nombre, string Apellido, string Dni, string Direccion, string Telefono, string FechaIngreso, int Estado, int Asistencias, int Pago, int NumeroAlumno)
+        public void Add(string Nombre, string Apellido, string Dni, string Direccion, string Telefono, string FechaIngreso, int Estado, int Asistencias, int Pago, int NumeroAlumno, byte[] Foto, int FichaMedica, int Carnet)
         {
-            string query = "INSERT INTO Alumnos(Nombre, Apellido, Dni, Direccion, Telefono, FechaIngreso, Estado, Asistencias, Pago,NumeroAlumno) values " +
-                "(@Nombre, @Apellido, @Dni, @Direccion, @Telefono, @FechaIngreso, @Estado, @Asistencias, @Pago, @NumeroAlumno)";
+            string query = "INSERT INTO Alumnos(Nombre, Apellido, Dni, Direccion, Telefono, FechaIngreso, Estado, Asistencias, Pago,NumeroAlumno, Foto, FichaMedica, Carnet) values " +
+                "(@Nombre, @Apellido, @Dni, @Direccion, @Telefono, @FechaIngreso, @Estado, @Asistencias, @Pago, @NumeroAlumno, @Foto, @FichaMedica, @Carnet)";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -98,6 +98,10 @@ namespace SinergiaApp
                 comando.Parameters.AddWithValue("@Asistencias", Asistencias);
                 comando.Parameters.AddWithValue("@Pago", Pago);
                 comando.Parameters.AddWithValue("@NumeroAlumno", NumeroAlumno);
+                comando.Parameters.AddWithValue("@Foto", Foto);
+                comando.Parameters.AddWithValue("@FichaMedica", FichaMedica);
+                comando.Parameters.AddWithValue("@Carnet", Carnet);
+
 
                 try
                 {
@@ -118,10 +122,10 @@ namespace SinergiaApp
         }
 
 
-        public void Edit(string Nombre, string Apellido, string Dni, string Direccion, string Telefono, int Estado, int Asistencias, int Id, int Pago, int NumeroAlumno)
+        public void Edit(string Nombre, string Apellido, string Dni, string Direccion, string Telefono, int Estado, int Asistencias, int Id, int Pago, int NumeroAlumno, int FichaMedica, int Carnet)
         {
-            string query = "UPDATE Alumnos SET Nombre = @Nombre , Apellido=@Apellido, Dni = @Dni, Direccion= @Direccion, " +
-                "Telefono=@Telefono, Estado= @Estado, Asistencias = @Asistencias , Pago = @Pago ,  NumeroAlumno = NumeroAlumno " +
+            string query = "UPDATE Alumnos SET Nombre = @Nombre , Apellido=@Apellido, Dni = @Dni, Direccion= @Direccion," +
+                "Telefono=@Telefono, Estado= @Estado, Asistencias = @Asistencias , Pago = @Pago ,  NumeroAlumno = NumeroAlumno, FichaMedica = @FichaMedica, Carnet = @Carnet " +
                 "WHERE Id = @Id";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -139,6 +143,8 @@ namespace SinergiaApp
                 comando.Parameters.AddWithValue("@Id", Id);
                 comando.Parameters.AddWithValue("@Pago", Pago);
                 comando.Parameters.AddWithValue("@NumeroAlumno", @NumeroAlumno);
+                comando.Parameters.AddWithValue("@FichaMedica", FichaMedica);
+                comando.Parameters.AddWithValue("@Carnet", Carnet);
 
                 try
                 {
@@ -164,7 +170,7 @@ namespace SinergiaApp
 
         public Alumnos RecuperarAlumno(int CodigoAlumno)
         {
-            
+
 
             string query = "Select * from alumnos" +
                 " WHERE NumeroAlumno = @NumeroAlumno";
@@ -191,11 +197,12 @@ namespace SinergiaApp
                     //Oalumnos.FechaIngreso = reader.GetString(6);
                     Oalumnos.Estado = reader.GetInt32(7);
                     Oalumnos.Asistencias = reader.GetInt32(8);
-                    
+
                     Oalumnos.Pago = reader.GetInt32(9);
                     Oalumnos.NumeroAlumno = reader.GetInt32(10);
-                    
-                    
+                    //Oalumnos.Foto = reader.GetByte(11);
+
+
 
 
                     reader.Close();

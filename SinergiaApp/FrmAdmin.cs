@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -74,11 +68,22 @@ namespace SinergiaApp
             frmE.txtDni.Text = dgvAlumnos.CurrentRow.Cells[3].Value.ToString();
             frmE.txtDireccion.Text = dgvAlumnos.CurrentRow.Cells[4].Value.ToString();
             frmE.txtTelefono.Text = dgvAlumnos.CurrentRow.Cells[5].Value.ToString();
+            frmE.txtNumeroAlumno.Text = dgvAlumnos.CurrentRow.Cells[6].Value.ToString();
             //frmE.dtpFecha.Value = dgvAlumnos.CurrentRow.Cells[5];
             //seleciono en el listBox de acuerdo a la BD
-            frmE.lbEstado.SelectedIndex = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells[7].Value);
-            frmE.txtAsistencias.Text = dgvAlumnos.CurrentRow.Cells[8].Value.ToString();
-            frmE.lbPago.SelectedIndex = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells[9].Value);
+            frmE.lbEstado.SelectedIndex = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells[8].Value);
+            frmE.txtAsistencias.Text = dgvAlumnos.CurrentRow.Cells[9].Value.ToString();
+            frmE.lbPago.SelectedIndex = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells[10].Value);
+            //creo el objeto imagen para pasarlo al pictureBox 
+            
+            byte img = (byte)dgvAlumnos.CurrentRow.Cells[11].Value;
+
+            frmE.lbFichaMedica.SelectedIndex = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells[12].Value);
+            frmE.lbCarnet.SelectedIndex = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells[13].Value);
+
+
+
+            //frmE.pbxFoto.Image =
 
             frmE.ShowDialog();
         }

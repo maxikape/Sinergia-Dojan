@@ -50,14 +50,22 @@ namespace SinergiaApp
             this.label10 = new System.Windows.Forms.Label();
             this.txtNumeroAlumno = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnFoto = new System.Windows.Forms.Button();
+            this.pbxFoto = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lbFichaMedica = new System.Windows.Forms.ListBox();
+            this.lbCarnet = new System.Windows.Forms.ListBox();
+            this.label12 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // txtAsistencias
             // 
             this.txtAsistencias.Location = new System.Drawing.Point(110, 376);
             this.txtAsistencias.Name = "txtAsistencias";
-            this.txtAsistencias.Size = new System.Drawing.Size(100, 20);
+            this.txtAsistencias.Size = new System.Drawing.Size(70, 20);
             this.txtAsistencias.TabIndex = 35;
+            this.txtAsistencias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAsistencias_KeyPress);
             // 
             // label8
             // 
@@ -74,6 +82,7 @@ namespace SinergiaApp
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
             this.txtTelefono.TabIndex = 31;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // label6
             // 
@@ -90,6 +99,7 @@ namespace SinergiaApp
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(100, 20);
             this.txtDireccion.TabIndex = 28;
+            this.txtDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccion_KeyPress);
             // 
             // label4
             // 
@@ -107,6 +117,7 @@ namespace SinergiaApp
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(100, 20);
             this.txtDni.TabIndex = 26;
+            this.txtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDni_KeyPress);
             // 
             // label3
             // 
@@ -123,6 +134,7 @@ namespace SinergiaApp
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 24;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // label2
             // 
@@ -135,9 +147,9 @@ namespace SinergiaApp
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(320, 151);
+            this.btnEditar.Location = new System.Drawing.Point(462, 376);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.Size = new System.Drawing.Size(64, 49);
             this.btnEditar.TabIndex = 22;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -149,6 +161,7 @@ namespace SinergiaApp
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 21;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label1
             // 
@@ -161,15 +174,16 @@ namespace SinergiaApp
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(110, 28);
+            this.txtId.Location = new System.Drawing.Point(110, 18);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(61, 20);
+            this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 38;
+            this.txtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(40, 28);
+            this.label5.Location = new System.Drawing.Point(20, 18);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(18, 13);
             this.label5.TabIndex = 39;
@@ -219,8 +233,9 @@ namespace SinergiaApp
             // 
             this.txtNumeroAlumno.Location = new System.Drawing.Point(110, 410);
             this.txtNumeroAlumno.Name = "txtNumeroAlumno";
-            this.txtNumeroAlumno.Size = new System.Drawing.Size(100, 20);
+            this.txtNumeroAlumno.Size = new System.Drawing.Size(70, 20);
             this.txtNumeroAlumno.TabIndex = 45;
+            this.txtNumeroAlumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroAlumno_KeyPress);
             // 
             // label7
             // 
@@ -231,11 +246,75 @@ namespace SinergiaApp
             this.label7.TabIndex = 44;
             this.label7.Text = "N° de Alumno";
             // 
+            // btnFoto
+            // 
+            this.btnFoto.Location = new System.Drawing.Point(298, 231);
+            this.btnFoto.Name = "btnFoto";
+            this.btnFoto.Size = new System.Drawing.Size(201, 23);
+            this.btnFoto.TabIndex = 51;
+            this.btnFoto.TabStop = false;
+            this.btnFoto.Text = "Foto";
+            this.btnFoto.UseVisualStyleBackColor = true;
+            // 
+            // pbxFoto
+            // 
+            this.pbxFoto.Location = new System.Drawing.Point(298, 28);
+            this.pbxFoto.Name = "pbxFoto";
+            this.pbxFoto.Size = new System.Drawing.Size(201, 186);
+            this.pbxFoto.TabIndex = 50;
+            this.pbxFoto.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(197, 337);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(38, 13);
+            this.label11.TabIndex = 57;
+            this.label11.Text = "Carnet";
+            // 
+            // lbFichaMedica
+            // 
+            this.lbFichaMedica.FormattingEnabled = true;
+            this.lbFichaMedica.Items.AddRange(new object[] {
+            "NO",
+            "SI"});
+            this.lbFichaMedica.Location = new System.Drawing.Point(280, 301);
+            this.lbFichaMedica.Name = "lbFichaMedica";
+            this.lbFichaMedica.Size = new System.Drawing.Size(55, 30);
+            this.lbFichaMedica.TabIndex = 56;
+            // 
+            // lbCarnet
+            // 
+            this.lbCarnet.FormattingEnabled = true;
+            this.lbCarnet.Items.AddRange(new object[] {
+            "NO",
+            "SI"});
+            this.lbCarnet.Location = new System.Drawing.Point(280, 337);
+            this.lbCarnet.Name = "lbCarnet";
+            this.lbCarnet.Size = new System.Drawing.Size(55, 30);
+            this.lbCarnet.TabIndex = 55;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(185, 301);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(71, 13);
+            this.label12.TabIndex = 54;
+            this.label12.Text = "Ficha Medica";
+            // 
             // FrmEditarAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(561, 450);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lbFichaMedica);
+            this.Controls.Add(this.lbCarnet);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.btnFoto);
+            this.Controls.Add(this.pbxFoto);
             this.Controls.Add(this.txtNumeroAlumno);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label9);
@@ -259,6 +338,7 @@ namespace SinergiaApp
             this.Controls.Add(this.label1);
             this.Name = "FrmEditarAlumno";
             this.Text = "FrmEditarAlumno";
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,5 +366,11 @@ namespace SinergiaApp
         private System.Windows.Forms.Label label10;
         public System.Windows.Forms.TextBox txtNumeroAlumno;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnFoto;
+        public System.Windows.Forms.PictureBox pbxFoto;
+        private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.ListBox lbFichaMedica;
+        public System.Windows.Forms.ListBox lbCarnet;
+        private System.Windows.Forms.Label label12;
     }
 }

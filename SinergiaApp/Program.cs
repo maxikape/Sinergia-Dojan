@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SinergiaApp
@@ -13,18 +10,27 @@ namespace SinergiaApp
         /// </summary>
         /// 
 
-         static Substring(int startIndex, int length)
-        {
-            string fechaActual = DateTime.Now.Date.ToString();
 
-             string fecha = fechaActual.Substring(startIndex, length);
-            return fecha ;
-        }
+
+
+        //******************************************************************************************************
+        //******************************************************************
+        //***************************************
+
+//#pragma warning disable CS1520 // El método debe tener un tipo de valor devuelto
+//        static Substring(int startIndex, int length)
+//#pragma warning restore CS1520 // El método debe tener un tipo de valor devuelto
+//        {
+//            string fechaActual = DateTime.Now.Date.ToString();
+
+//            string fecha = fechaActual.Substring(startIndex, length);
+//            return fecha;
+//        }
 
         [STAThread]
         static void Main()
         {
-       
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
