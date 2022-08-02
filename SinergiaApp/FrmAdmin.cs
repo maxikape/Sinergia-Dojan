@@ -75,8 +75,8 @@ namespace SinergiaApp
             frmE.txtAsistencias.Text = dgvAlumnos.CurrentRow.Cells[9].Value.ToString();
             frmE.lbPago.SelectedIndex = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells[10].Value);
             //creo el objeto imagen para pasarlo al pictureBox 
-            
-            byte img = (byte)dgvAlumnos.CurrentRow.Cells[11].Value;
+
+            //byte img = (byte)dgvAlumnos.CurrentRow.Cells[11].Value;
 
             frmE.lbFichaMedica.SelectedIndex = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells[12].Value);
             frmE.lbCarnet.SelectedIndex = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells[13].Value);
@@ -125,5 +125,19 @@ namespace SinergiaApp
             return fecha;
         }
 
+        private void dgvAlumnos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -56,6 +56,7 @@ namespace SinergiaApp
             this.lbFichaMedica = new System.Windows.Forms.ListBox();
             this.lbCarnet = new System.Windows.Forms.ListBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -304,11 +305,23 @@ namespace SinergiaApp
             this.label12.TabIndex = 54;
             this.label12.Text = "Ficha Medica";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(271, 415);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(88, 23);
+            this.button1.TabIndex = 58;
+            this.button1.TabStop = false;
+            this.button1.Text = "Ver Asistencias";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmEditarAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.lbFichaMedica);
             this.Controls.Add(this.lbCarnet);
@@ -372,5 +385,6 @@ namespace SinergiaApp
         public System.Windows.Forms.ListBox lbFichaMedica;
         public System.Windows.Forms.ListBox lbCarnet;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button1;
     }
 }

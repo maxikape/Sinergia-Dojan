@@ -17,15 +17,15 @@ namespace SinergiaApp
         //******************************************************************
         //***************************************
 
-//#pragma warning disable CS1520 // El método debe tener un tipo de valor devuelto
-//        static Substring(int startIndex, int length)
-//#pragma warning restore CS1520 // El método debe tener un tipo de valor devuelto
-//        {
-//            string fechaActual = DateTime.Now.Date.ToString();
+        //#pragma warning disable CS1520 // El método debe tener un tipo de valor devuelto
+        //        static Substring(int startIndex, int length)
+        //#pragma warning restore CS1520 // El método debe tener un tipo de valor devuelto
+        //        {
+        //            string fechaActual = DateTime.Now.Date.ToString();
 
-//            string fecha = fechaActual.Substring(startIndex, length);
-//            return fecha;
-//        }
+        //            string fecha = fechaActual.Substring(startIndex, length);
+        //            return fecha;
+        //        }
 
         [STAThread]
         static void Main()

@@ -8,14 +8,9 @@ namespace SinergiaApp
         public Form1()
         {
             InitializeComponent();
-            //Substring(0, 2);
-            //var fecha = Substring(0, 2);
-            //if (fecha == "1/")
-            //{
-            //    this.Close();
-            //}
 
         }
+        SinergiaDB oSinergiaDB = new SinergiaDB();
 
         Validaciones validar = new Validaciones();
 
@@ -27,16 +22,18 @@ namespace SinergiaApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+
             FrmAdmin a = new FrmAdmin();
             a.ShowDialog();
         }
 
 
         private void button1_Click(object sender, EventArgs e)
+
         {
-            FrmFichaAlumno frm = new FrmFichaAlumno(Convert.ToInt32(txtNumAlumno.Text));
-            //Substring(0, 2);
+            var a = oSinergiaDB.Existe(Convert.ToInt32(txtNumAlumno.Text));
+            FrmFichaAlumno frm = new FrmFichaAlumno(Convert.ToInt32(txtNumAlumno.Text), a);
+
             frm.ShowDialog();
         }
 
@@ -48,30 +45,20 @@ namespace SinergiaApp
         }
 
 
-        //public string Substring(int startIndex, int length)
-        //{
-        //    string fechaActual = DateTime.Now.Date.ToString();
-
-        //    // recupero el numero de alumno del textbox
-        //    //int valor2 = Convert.ToInt32(txtNumAlumno.Text);
-        //    SinergiaDB Osine = new SinergiaDB();
-
-        //    //Osine.RecuperarAlumno(1);
-
-        //    string fecha = fechaActual.Substring(startIndex, length);
-        //    return fecha;
-        //}
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //var fecha = Substring(0, 2);
-            //if (fecha == "1/")
-            //{
-            //    this.Close();
-            //}
+
             btnConfirmar.Enabled = false;
-            
+            //wtfffffffffffffffffffffffffffffffffffffffffff
+            var fecha = DateTime.Now.Date.Day;
+            //int day = fecha.Day;
+            if (fecha == 1)
+            {
+                oSinergiaDB.ReiniarPagos();
+            }
+
         }
 
         //al presionar entre abrir el formulario del alumo
@@ -92,12 +79,15 @@ namespace SinergiaApp
             }
 
 
-            else if (e.KeyChar == Convert.ToChar(Keys.Enter) )
+            else if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
 
+                //deberia buscar el alumno aca
+                var a = oSinergiaDB.Existe(Convert.ToInt32(txtNumAlumno.Text));
 
-                FrmFichaAlumno frm = new FrmFichaAlumno(Convert.ToInt32(txtNumAlumno.Text));
-                //Substring(0, 2);
+                FrmFichaAlumno frm = new FrmFichaAlumno(Convert.ToInt32(txtNumAlumno.Text), a);
+
+
                 frm.ShowDialog();
 
 
@@ -109,6 +99,9 @@ namespace SinergiaApp
             ValidarCampos();
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

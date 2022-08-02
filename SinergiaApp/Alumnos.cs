@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace SinergiaApp
+﻿namespace SinergiaApp
 {
     public class Alumnos
     {
@@ -20,7 +18,7 @@ namespace SinergiaApp
         public int Carnet { get; set; }
 
 
-
+        // select Alumnos.IdFechaTb , FechaTb.FechaDia from Alumnos join FechaTb on  Alumnos.IdFechaTb = FechaTb.IdFecha
 
     }
 }

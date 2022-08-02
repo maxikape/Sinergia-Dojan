@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SinergiaApp
 {
     public class Validaciones
     {
-        public void SoloLetras(KeyPressEventArgs e) 
+        public void SoloLetras(KeyPressEventArgs e)
         {
             try
             {
@@ -30,7 +26,7 @@ namespace SinergiaApp
 
                 }
 
-                else 
+                else
                 {
                     e.Handled = true;
                 }
@@ -41,8 +37,8 @@ namespace SinergiaApp
 
                 throw;
             }
-        
-        
+
+
         }
 
 

@@ -76,6 +76,12 @@ namespace SinergiaApp
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmAsistencias frmnuevoa = new FrmAsistencias(Convert.ToInt32(txtId.Text));
+            frmnuevoa.ShowDialog();
+        }
+
 
         //private void ValidarCampos()
         //{

@@ -50,17 +50,20 @@ namespace SinergiaApp
             this.label9 = new System.Windows.Forms.Label();
             this.txtNumeroAlumno = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.pbxAlumno = new System.Windows.Forms.PictureBox();
             this.btnFoto = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.lbFichaMedica = new System.Windows.Forms.ListBox();
             this.lbCarnet = new System.Windows.Forms.ListBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.pbxAlumno = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAlumno)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(14, 27);
             this.label1.Name = "label1";
@@ -71,6 +74,9 @@ namespace SinergiaApp
             // 
             // txtNombre
             // 
+            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombre.Location = new System.Drawing.Point(115, 24);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
@@ -80,6 +86,9 @@ namespace SinergiaApp
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.Location = new System.Drawing.Point(513, 391);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(60, 45);
@@ -90,6 +99,9 @@ namespace SinergiaApp
             // 
             // txtApellido
             // 
+            this.txtApellido.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtApellido.Location = new System.Drawing.Point(115, 79);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
@@ -99,6 +111,9 @@ namespace SinergiaApp
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(11, 79);
             this.label2.Name = "label2";
@@ -108,6 +123,9 @@ namespace SinergiaApp
             // 
             // txtDni
             // 
+            this.txtDni.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDni.Location = new System.Drawing.Point(115, 130);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(100, 20);
@@ -118,6 +136,9 @@ namespace SinergiaApp
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(14, 130);
             this.label3.Name = "label3";
@@ -127,6 +148,9 @@ namespace SinergiaApp
             // 
             // txtDireccion
             // 
+            this.txtDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDireccion.Location = new System.Drawing.Point(115, 182);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(100, 20);
@@ -136,6 +160,9 @@ namespace SinergiaApp
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(11, 185);
             this.label4.Name = "label4";
@@ -145,6 +172,9 @@ namespace SinergiaApp
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 265);
             this.label5.Name = "label5";
@@ -154,6 +184,9 @@ namespace SinergiaApp
             // 
             // txtTelefono
             // 
+            this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTelefono.Location = new System.Drawing.Point(115, 223);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
@@ -163,6 +196,9 @@ namespace SinergiaApp
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(14, 230);
             this.label6.Name = "label6";
@@ -172,6 +208,9 @@ namespace SinergiaApp
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(12, 309);
             this.label7.Name = "label7";
@@ -181,6 +220,9 @@ namespace SinergiaApp
             // 
             // txtAsistencias
             // 
+            this.txtAsistencias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAsistencias.Location = new System.Drawing.Point(115, 391);
             this.txtAsistencias.Name = "txtAsistencias";
             this.txtAsistencias.Size = new System.Drawing.Size(100, 20);
@@ -190,6 +232,9 @@ namespace SinergiaApp
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(14, 391);
             this.label8.Name = "label8";
@@ -200,6 +245,9 @@ namespace SinergiaApp
             // 
             // dtpFecha
             // 
+            this.dtpFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpFecha.Location = new System.Drawing.Point(115, 265);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(194, 20);
@@ -207,6 +255,9 @@ namespace SinergiaApp
             // 
             // lbPago
             // 
+            this.lbPago.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbPago.FormattingEnabled = true;
             this.lbPago.Items.AddRange(new object[] {
             "Impaga",
@@ -218,6 +269,9 @@ namespace SinergiaApp
             // 
             // lbEstado
             // 
+            this.lbEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbEstado.FormattingEnabled = true;
             this.lbEstado.Items.AddRange(new object[] {
             "Inactivo",
@@ -229,6 +283,9 @@ namespace SinergiaApp
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(14, 345);
             this.label9.Name = "label9";
@@ -238,6 +295,9 @@ namespace SinergiaApp
             // 
             // txtNumeroAlumno
             // 
+            this.txtNumeroAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNumeroAlumno.Location = new System.Drawing.Point(115, 422);
             this.txtNumeroAlumno.Name = "txtNumeroAlumno";
             this.txtNumeroAlumno.Size = new System.Drawing.Size(100, 20);
@@ -247,6 +307,9 @@ namespace SinergiaApp
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(20, 425);
             this.label10.Name = "label10";
@@ -254,17 +317,11 @@ namespace SinergiaApp
             this.label10.TabIndex = 46;
             this.label10.Text = "N° de Alumno";
             // 
-            // pbxAlumno
-            // 
-            this.pbxAlumno.Location = new System.Drawing.Point(348, 27);
-            this.pbxAlumno.Name = "pbxAlumno";
-            this.pbxAlumno.Size = new System.Drawing.Size(201, 186);
-            this.pbxAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxAlumno.TabIndex = 48;
-            this.pbxAlumno.TabStop = false;
-            // 
             // btnFoto
             // 
+            this.btnFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFoto.Location = new System.Drawing.Point(348, 230);
             this.btnFoto.Name = "btnFoto";
             this.btnFoto.Size = new System.Drawing.Size(201, 23);
@@ -272,10 +329,12 @@ namespace SinergiaApp
             this.btnFoto.TabStop = false;
             this.btnFoto.Text = "Foto";
             this.btnFoto.UseVisualStyleBackColor = true;
-            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
             // 
             // label11
             // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(215, 345);
             this.label11.Name = "label11";
@@ -285,6 +344,9 @@ namespace SinergiaApp
             // 
             // lbFichaMedica
             // 
+            this.lbFichaMedica.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbFichaMedica.FormattingEnabled = true;
             this.lbFichaMedica.Items.AddRange(new object[] {
             "NO",
@@ -296,6 +358,9 @@ namespace SinergiaApp
             // 
             // lbCarnet
             // 
+            this.lbCarnet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbCarnet.FormattingEnabled = true;
             this.lbCarnet.Items.AddRange(new object[] {
             "NO",
@@ -307,12 +372,27 @@ namespace SinergiaApp
             // 
             // label12
             // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(203, 309);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(71, 13);
             this.label12.TabIndex = 50;
             this.label12.Text = "Ficha Medica";
+            // 
+            // pbxAlumno
+            // 
+            this.pbxAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxAlumno.Location = new System.Drawing.Point(348, 27);
+            this.pbxAlumno.Name = "pbxAlumno";
+            this.pbxAlumno.Size = new System.Drawing.Size(201, 186);
+            this.pbxAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxAlumno.TabIndex = 48;
+            this.pbxAlumno.TabStop = false;
             // 
             // FrmNuevoAlumno
             // 
