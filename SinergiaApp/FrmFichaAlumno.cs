@@ -20,7 +20,7 @@ namespace SinergiaApp
 
             if (existe == true)
             {
-                MessageBox.Show("el alumno no extiste");
+                MessageBox.Show("el alumno no existe");
 
             }
             else
@@ -42,7 +42,7 @@ namespace SinergiaApp
                 {
                     lblPago.Text = "IMPAGA";
                     //cambio el color a rojo
-                    lblPago.ForeColor = System.Drawing.Color.Red;
+                    lblPago.BackColor = System.Drawing.Color.Red;
 
                     var asisten = alumno.Asistencias + 1;
                     OsinergiaDB.SumarAsistencia(alumno.Id, asisten);
@@ -55,13 +55,13 @@ namespace SinergiaApp
                     {
                         label7.Text = "SI";
                         //cambio el color a verde
-                        label7.ForeColor = System.Drawing.Color.Green;
+                        label7.BackColor = System.Drawing.Color.Green;
                     }
                     else if (ficha == 0)
                     {
                         label7.Text = "No";
                         //cambio el color a rojo
-                        label7.ForeColor = System.Drawing.Color.Red;
+                        label7.BackColor = System.Drawing.Color.Red;
                     }
 
 
@@ -69,19 +69,19 @@ namespace SinergiaApp
                     {
                         label9.Text = "SI";
                         //cambio el color a verde
-                        label9.ForeColor = System.Drawing.Color.Green;
+                        label9.BackColor = System.Drawing.Color.Green;
                     }
                     else if (carnet == 0)
                     {
                         label9.Text = "No";
                         //cambio el color a rojo
-                        label9.ForeColor = System.Drawing.Color.Red;
+                        label9.BackColor = System.Drawing.Color.Red;
                     }
 
                 }
                 else
                 {
-                    lblPago.ForeColor = System.Drawing.Color.Green;
+                    lblPago.BackColor = System.Drawing.Color.Green;
                     lblPago.Text = "PAGA";
                     var asisten = alumno.Asistencias + 1;
                     //sumo asistencia al alumno
@@ -100,13 +100,14 @@ namespace SinergiaApp
                     {
                         label7.Text = "SI";
                         //cambio el color a verde
-                        label7.ForeColor = System.Drawing.Color.Green;
+                        
+                        label7.BackColor = System.Drawing.Color.Green;
                     }
                     else if (ficha == 0)
                     {
                         label7.Text = "No";
                         //cambio el color a rojo
-                        label7.ForeColor = System.Drawing.Color.Red;
+                        label7.BackColor = System.Drawing.Color.Red;
                     }
 
 
@@ -114,13 +115,13 @@ namespace SinergiaApp
                     {
                         label9.Text = "SI";
                         //cambio el color a verde
-                        label9.ForeColor = System.Drawing.Color.Green;
+                        label9.BackColor = System.Drawing.Color.Green;
                     }
                     else if (carnet == 0)
                     {
                         label9.Text = "No";
                         //cambio el color a rojo
-                        label9.ForeColor = System.Drawing.Color.Red;
+                        label9.BackColor = System.Drawing.Color.Red;
                     }
 
                     //if (ficha == 1)
@@ -168,9 +169,14 @@ namespace SinergiaApp
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void FrmFichaAlumno_KeyPress(object sender, KeyPressEventArgs e)
         {
             this.Close();
         }
+
+        //private void timer1_Tick(object sender, EventArgs e)
+        //{
+        //    this.Close();
+        //}
     }
 }

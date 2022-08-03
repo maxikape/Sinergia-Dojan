@@ -139,5 +139,15 @@ namespace SinergiaApp
         {
 
         }
+
+        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SinergiaDB OsinergiaDB = new SinergiaDB();
+
+            OsinergiaDB.ReiniarPagos();
+            
+        }
     }
 }
