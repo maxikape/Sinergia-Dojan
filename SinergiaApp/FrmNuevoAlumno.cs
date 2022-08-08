@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Grpc.Core;
+using System;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace SinergiaApp
@@ -26,10 +29,13 @@ namespace SinergiaApp
         {
             SinergiaDB oSinergiaDB = new SinergiaDB();
 
-            //creo el objeto de entrada salida ms
-            //System.IO.MemoryStream ms = new System.IO.MemoryStream();
-            ////lo que tenga en el pictoreBox lo va a grabar en el obejto ms de aqui arriva
-            //pbxAlumno.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+
+            string fname = txtDni + ".jpg";
+            string folder = "C\\Fotos";
+            string pathString = System.IO.Path.Combine(folder, fname);
+
+
 
             var pago = lbPago.SelectedIndex; ;
             var estado = lbEstado.SelectedIndex;
@@ -38,7 +44,7 @@ namespace SinergiaApp
 
             try
             {
-                oSinergiaDB.Add(txtNombre.Text, txtApellido.Text, txtDni.Text, txtDireccion.Text, txtTelefono.Text, Convert.ToString(dtpFecha.Value), estado, Convert.ToInt32(txtAsistencias.Text), pago, Convert.ToInt32(txtNumeroAlumno.Text),/* ms.GetBuffer()*/ fichaMedica, carnet);
+                oSinergiaDB.Add(txtApellido.Text, txtNombre.Text, txtDni.Text, txtDireccion.Text, txtTelefono.Text, Convert.ToString(dtpFecha.Value), estado, Convert.ToInt32(txtAsistencias.Text), pago, Convert.ToInt32(txtNumeroAlumno.Text),/* ms.GetBuffer()*/ fichaMedica, carnet);
                 this.Close();
 
             }
@@ -76,21 +82,24 @@ namespace SinergiaApp
 
         }
 
-        //private void btnFoto_Click(object sender, EventArgs e)
-        //{
-        //    //of es el objeto que va a recibir una imagen
-        //    OpenFileDialog of = new OpenFileDialog();
-        //    //dialog result es el resultado
-        //    DialogResult dr = of.ShowDialog();
+        private void btnFoto_Click(object sender, EventArgs e)
+        {
+            //of es el objeto que va a recibir una imagen
+            OpenFileDialog of = new OpenFileDialog();
+            //dialog result es el resultado
+            DialogResult dr = of.ShowDialog();
 
+            //string fname = txtDni + "jpg";
+            //string folder = "C\\Fotos";
+            //string pathString = System.IO.Path.Combine(folder, fname);
 
-        //    if (dr == DialogResult.OK)
-        //    {
-        //        //mustra la imagen en el pictoreBox
-        //        pbxAlumno.Image = Image.FromFile(of.FileName);
-        //    }
+            //if (dr == DialogResult.OK)
+            //{
+            //    //mustra la imagen en el pictoreBox
+            //    pbxAlumno.Image = Image.FromFile(of.FileName);
+            //}
 
-        //}
+        }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
@@ -162,6 +171,21 @@ namespace SinergiaApp
         {
             validar.SoloNumeros(e);
 
+        }
+
+        private void pbxAlumno_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            //dialog result es el resultado
+            PictureBox p = sender as PictureBox;
+            if (p != null)
+            {
+                open.Filter = "(*.jpg;*) | *.jpg;*";
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    p.Image = Image.FromFile(open.FileName);
+                }
+            }
         }
     }
 }

@@ -59,11 +59,11 @@ namespace SinergiaApp
             this.lblPago.AutoSize = true;
             this.lblPago.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblPago.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lblPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPago.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblPago.Location = new System.Drawing.Point(180, 381);
+            this.lblPago.Location = new System.Drawing.Point(177, 462);
             this.lblPago.Name = "lblPago";
-            this.lblPago.Size = new System.Drawing.Size(76, 26);
+            this.lblPago.Size = new System.Drawing.Size(132, 46);
             this.lblPago.TabIndex = 11;
             this.lblPago.Text = "label5";
             // 
@@ -121,7 +121,7 @@ namespace SinergiaApp
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(41, 381);
+            this.label1.Location = new System.Drawing.Point(41, 474);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 20);
@@ -186,7 +186,7 @@ namespace SinergiaApp
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(41, 416);
+            this.label6.Location = new System.Drawing.Point(41, 384);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 20);
@@ -202,7 +202,7 @@ namespace SinergiaApp
             this.label7.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Window;
-            this.label7.Location = new System.Drawing.Point(180, 416);
+            this.label7.Location = new System.Drawing.Point(180, 384);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 26);
             this.label7.TabIndex = 18;
@@ -214,7 +214,7 @@ namespace SinergiaApp
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(41, 449);
+            this.label8.Location = new System.Drawing.Point(41, 417);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 20);
@@ -230,7 +230,7 @@ namespace SinergiaApp
             this.label9.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Window;
-            this.label9.Location = new System.Drawing.Point(180, 449);
+            this.label9.Location = new System.Drawing.Point(180, 417);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 26);
             this.label9.TabIndex = 20;
@@ -243,7 +243,7 @@ namespace SinergiaApp
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(29, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(223, 0);
+            this.pictureBox1.Size = new System.Drawing.Size(223, 12);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
@@ -266,7 +266,7 @@ namespace SinergiaApp
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(45, 12);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(223, 202);
+            this.pictureBox3.Size = new System.Drawing.Size(223, 214);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 24;
             this.pictureBox3.TabStop = false;
@@ -275,7 +275,7 @@ namespace SinergiaApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 518);
+            this.ClientSize = new System.Drawing.Size(1003, 530);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);

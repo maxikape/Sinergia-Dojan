@@ -28,9 +28,10 @@ namespace SinergiaApp
             var fichaMedica = lbFichaMedica.SelectedIndex;
             var carnet = lbCarnet.SelectedIndex;
 
+
             oSinergiaDB.Edit(txtNombre.Text, txtApellido.Text, txtDni.Text, txtDireccion.Text, txtTelefono.Text, estado, Convert.ToInt32(txtAsistencias.Text), Convert.ToInt32(txtId.Text), pago, Convert.ToInt32(txtNumeroAlumno.Text), fichaMedica, carnet);
 
-            this.Close();
+            
 
 
         }

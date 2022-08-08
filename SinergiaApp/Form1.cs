@@ -28,13 +28,15 @@ namespace SinergiaApp
         }
 
 
+
         private void button1_Click(object sender, EventArgs e)
 
         {
             var a = oSinergiaDB.Existe(Convert.ToInt32(txtNumAlumno.Text));
             FrmFichaAlumno frm = new FrmFichaAlumno(Convert.ToInt32(txtNumAlumno.Text), a);
-
+            txtNumAlumno.Clear();
             frm.ShowDialog();
+            
         }
 
         private void ValidarCampos()
@@ -87,7 +89,7 @@ namespace SinergiaApp
 
                 FrmFichaAlumno frm = new FrmFichaAlumno(Convert.ToInt32(txtNumAlumno.Text), a);
 
-
+                txtNumAlumno.Clear();
                 frm.ShowDialog();
 
 

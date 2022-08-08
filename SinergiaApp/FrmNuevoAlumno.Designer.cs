@@ -329,6 +329,7 @@ namespace SinergiaApp
             this.btnFoto.TabStop = false;
             this.btnFoto.Text = "Foto";
             this.btnFoto.UseVisualStyleBackColor = true;
+            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
             // 
             // label11
             // 
@@ -387,12 +388,14 @@ namespace SinergiaApp
             this.pbxAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxAlumno.Image = global::SinergiaApp.Properties.Resources.user;
             this.pbxAlumno.Location = new System.Drawing.Point(348, 27);
             this.pbxAlumno.Name = "pbxAlumno";
             this.pbxAlumno.Size = new System.Drawing.Size(201, 186);
             this.pbxAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxAlumno.TabIndex = 48;
             this.pbxAlumno.TabStop = false;
+            this.pbxAlumno.Click += new System.EventHandler(this.pbxAlumno_Click);
             // 
             // FrmNuevoAlumno
             // 

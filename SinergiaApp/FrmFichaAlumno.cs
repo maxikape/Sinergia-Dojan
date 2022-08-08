@@ -169,9 +169,12 @@ namespace SinergiaApp
 
         }
 
+
         private void FrmFichaAlumno_KeyPress(object sender, KeyPressEventArgs e)
         {
+            
             this.Close();
+
         }
 
         //private void timer1_Tick(object sender, EventArgs e)

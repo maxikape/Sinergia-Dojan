@@ -9,7 +9,7 @@ namespace SinergiaApp
         //MIO DESKTOP-P9QCAB9
         //DESKTOP-OTU6T9I\\SQLEXPRESS
 
-        private string connectionString = "Data Source= DESKTOP-OTU6T9I\\SQLEXPRESS;Initial Catalog= SinergiaDB;Integrated Security = True";
+        private string connectionString = "Data Source= DESKTOP-P9QCAB9;Initial Catalog= SinergiaDB;Integrated Security = True";
 
         public bool Ok()
         {
@@ -126,9 +126,9 @@ namespace SinergiaApp
         }
 
         //editar un alumno 
-        public void Edit(string Apellido, string Nombre, string Dni, string Direccion, string Telefono, int Estado, int Asistencias, int Id, int Pago, int NumeroAlumno, int FichaMedica, int Carnet)
+        public void Edit(string Nombre, string Apellido, string Dni, string Direccion, string Telefono, int Estado, int Asistencias, int Id, int Pago, int NumeroAlumno, int FichaMedica, int Carnet)
         {
-            string query = "UPDATE Alumnos SET Nombre = @Nombre , Apellido=@Apellido, Dni = @Dni, Direccion= @Direccion," +
+            string query = "UPDATE Alumnos SET Apellido=@Apellido, Nombre = @Nombre , Dni = @Dni, Direccion= @Direccion," +
                 "Telefono=@Telefono, Estado= @Estado, Asistencias = @Asistencias , Pago = @Pago ,  NumeroAlumno = NumeroAlumno, FichaMedica = @FichaMedica, Carnet = @Carnet " +
                 "WHERE Id = @Id";
 
@@ -136,8 +136,10 @@ namespace SinergiaApp
             {
                 SqlCommand comando = new SqlCommand(query, connection);
 
+                
                 comando.Parameters.AddWithValue("@Nombre", Nombre);
                 comando.Parameters.AddWithValue("@Apellido", Apellido);
+
                 comando.Parameters.AddWithValue("@Dni", Dni);
                 comando.Parameters.AddWithValue("@Direccion", Direccion);
                 comando.Parameters.AddWithValue("@Telefono", Telefono);

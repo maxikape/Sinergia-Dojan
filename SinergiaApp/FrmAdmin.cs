@@ -63,8 +63,8 @@ namespace SinergiaApp
             FrmEditarAlumno frmE = new FrmEditarAlumno(); //Instancio el Form que abrire
 
             frmE.txtId.Text = dgvAlumnos.CurrentRow.Cells[0].Value.ToString();
-            frmE.txtNombre.Text = dgvAlumnos.CurrentRow.Cells[1].Value.ToString();
-            frmE.txtApellido.Text = dgvAlumnos.CurrentRow.Cells[2].Value.ToString();
+            frmE.txtNombre.Text = dgvAlumnos.CurrentRow.Cells[2].Value.ToString();
+            frmE.txtApellido.Text = dgvAlumnos.CurrentRow.Cells[1].Value.ToString();
             frmE.txtDni.Text = dgvAlumnos.CurrentRow.Cells[3].Value.ToString();
             frmE.txtDireccion.Text = dgvAlumnos.CurrentRow.Cells[4].Value.ToString();
             frmE.txtTelefono.Text = dgvAlumnos.CurrentRow.Cells[5].Value.ToString();
