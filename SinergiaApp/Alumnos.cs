@@ -8,8 +8,9 @@
         public string Dni { get; set; }
         public string Direccion { get; set; }
         public string Telefono { get; set; }
-        public int NumeroAlumno { get; set; }
         public string FechaIngreso { get; set; }
+        public int NumeroAlumno { get; set; }
+    
         public int Estado { get; set; }
         public int Asistencias { get; set; }
         public int Pago { get; set; }

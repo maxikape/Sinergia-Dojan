@@ -16,7 +16,7 @@ namespace SinergiaApp
             //    cargar();
             //}
         }
-        Validaciones validar = new Validaciones();
+        //Validaciones validar = new Validaciones();
 
 
         private void btnEditar_Click(object sender, System.EventArgs e)
@@ -29,9 +29,9 @@ namespace SinergiaApp
             var carnet = lbCarnet.SelectedIndex;
 
 
-            oSinergiaDB.Edit(txtNombre.Text, txtApellido.Text, txtDni.Text, txtDireccion.Text, txtTelefono.Text, estado, Convert.ToInt32(txtAsistencias.Text), Convert.ToInt32(txtId.Text), pago, Convert.ToInt32(txtNumeroAlumno.Text), fichaMedica, carnet);
+            oSinergiaDB.Edit(Convert.ToInt32(txtId.Text),txtApellido.Text, txtNombre.Text, txtDni.Text, txtDireccion.Text, txtTelefono.Text, Convert.ToInt32(txtNumeroAlumno.Text), estado, Convert.ToInt32(txtAsistencias.Text), pago,  fichaMedica, carnet);
 
-            
+            this.Close();
 
 
         }
@@ -42,17 +42,14 @@ namespace SinergiaApp
         }
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validar.SoloLetras(e);
         }
 
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validar.SoloLetras(e);
         }
 
         private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validar.SoloNumeros(e);
         }
 
         private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
@@ -62,25 +59,22 @@ namespace SinergiaApp
 
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validar.SoloNumeros(e);
         }
 
         private void txtAsistencias_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validar.SoloNumeros(e);
 
         }
 
         private void txtNumeroAlumno_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validar.SoloNumeros(e);
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             FrmAsistencias frmnuevoa = new FrmAsistencias(Convert.ToInt32(txtId.Text));
-            frmnuevoa.ShowDialog();
+            //frmnuevoa.ShowDialog();
         }
 
 

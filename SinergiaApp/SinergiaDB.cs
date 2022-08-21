@@ -124,19 +124,21 @@ namespace SinergiaApp
 
 
         }
+        //public void Edit(int Id, string Nombre, string Apellido, string Dni, string Direccion, string Telefono, int Estado, int Asistencias, int Pago, int NumeroAlumno, int FichaMedica, int Carnet)
 
         //editar un alumno 
-        public void Edit(string Nombre, string Apellido, string Dni, string Direccion, string Telefono, int Estado, int Asistencias, int Id, int Pago, int NumeroAlumno, int FichaMedica, int Carnet)
+
+        public void Edit(int Id, string Apellido, string Nombre, string Dni, string Direccion, string Telefono, int NumeroAlumno, int Estado, int Asistencias, int Pago, int FichaMedica, int Carnet)
         {
             string query = "UPDATE Alumnos SET Apellido=@Apellido, Nombre = @Nombre , Dni = @Dni, Direccion= @Direccion," +
-                "Telefono=@Telefono, Estado= @Estado, Asistencias = @Asistencias , Pago = @Pago ,  NumeroAlumno = NumeroAlumno, FichaMedica = @FichaMedica, Carnet = @Carnet " +
+                "Telefono=@Telefono, Estado= @Estado, Asistencias = @Asistencias , Pago = @Pago ,  NumeroAlumno = @NumeroAlumno, FichaMedica = @FichaMedica, Carnet = @Carnet " +
                 "WHERE Id = @Id";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand comando = new SqlCommand(query, connection);
 
-                
+
                 comando.Parameters.AddWithValue("@Nombre", Nombre);
                 comando.Parameters.AddWithValue("@Apellido", Apellido);
 
@@ -464,7 +466,7 @@ namespace SinergiaApp
                 SqlCommand comando = new SqlCommand(query, connection);
 
                 comando.Parameters.AddWithValue("@Pago", 0);
-              
+
 
 
 
