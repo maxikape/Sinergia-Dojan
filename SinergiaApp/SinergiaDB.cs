@@ -81,12 +81,12 @@ namespace SinergiaApp
         }
 
         //agregar un nuevo alumno
-        public void Add(string Apellido, string Nombre, string Dni, string Direccion, string Telefono, string FechaIngreso, int Estado, int Asistencias, int Pago, int NumeroAlumno, /*byte[] Foto, */int FichaMedica, int Carnet)
+        public void Add(string Apellido, string Nombre, string Dni, string Direccion, string Telefono, string FechaIngreso, int Estado, int Asistencias, int Pago, int NumeroAlumno, /*byte[] Foto, */int FichaMedica, int Carnet, string Foto)
         {
             //        string query = "INSERT INTO Alumnos(Nombre, Apellido, Dni, Direccion, Telefono, FechaIngreso, Estado, Asistencias, Pago,NumeroAlumno, Foto, FichaMedica, Carnet) values " +
             //"(@Nombre, @Apellido, @Dni, @Direccion, @Telefono, @FechaIngreso, @Estado, @Asistencias, @Pago, @NumeroAlumno, @Foto, @FichaMedica, @Carnet)";
-            string query = "INSERT INTO Alumnos(Nombre, Apellido, Dni, Direccion, Telefono, FechaIngreso, Estado, Asistencias, Pago,NumeroAlumno, FichaMedica, Carnet) values " +
-                "(@Nombre, @Apellido, @Dni, @Direccion, @Telefono, @FechaIngreso, @Estado, @Asistencias, @Pago, @NumeroAlumno,@FichaMedica, @Carnet)";
+            string query = "INSERT INTO Alumnos(Nombre, Apellido, Dni, Direccion, Telefono, FechaIngreso, Estado, Asistencias, Pago,NumeroAlumno, FichaMedica, Carnet, Foto) values " +
+                "(@Nombre, @Apellido, @Dni, @Direccion, @Telefono, @FechaIngreso, @Estado, @Asistencias, @Pago, @NumeroAlumno,@FichaMedica, @Carnet, @Foto)";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -105,6 +105,7 @@ namespace SinergiaApp
                 //comando.Parameters.AddWithValue("@Foto", Foto);
                 comando.Parameters.AddWithValue("@FichaMedica", FichaMedica);
                 comando.Parameters.AddWithValue("@Carnet", Carnet);
+                comando.Parameters.AddWithValue("@Foto", Foto);
 
 
                 try
@@ -184,7 +185,8 @@ namespace SinergiaApp
             string query = "Select * from alumnos" +
                 " WHERE NumeroAlumno = @NumeroAlumno";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (
+                SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand comando = new SqlCommand(query, connection);
                 comando.Parameters.AddWithValue("@NumeroAlumno", CodigoAlumno);
@@ -213,7 +215,7 @@ namespace SinergiaApp
                     Oalumnos.FichaMedica = reader.GetInt32(12);
                     Oalumnos.Carnet = reader.GetInt32(11);
 
-                    //Oalumnos.Foto = reader.GetByte(11);
+                    Oalumnos.Foto = reader.GetString(13);
 
 
 

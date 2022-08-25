@@ -14,9 +14,11 @@
         public int Estado { get; set; }
         public int Asistencias { get; set; }
         public int Pago { get; set; }
-        public byte Foto { get; set; }
+        
         public int FichaMedica { get; set; }
         public int Carnet { get; set; }
+
+        public string Foto { get; set; }
 
 
         // select Alumnos.IdFechaTb , FechaTb.FechaDia from Alumnos join FechaTb on  Alumnos.IdFechaTb = FechaTb.IdFecha

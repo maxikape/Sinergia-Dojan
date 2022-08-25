@@ -30,28 +30,39 @@ namespace SinergiaApp
             SinergiaDB oSinergiaDB = new SinergiaDB();
 
 
-
-            string fname = txtDni + ".jpg";
-            string folder = "C\\Fotos";
-            string pathString = System.IO.Path.Combine(folder, fname);
-
-
-
-            var pago = lbPago.SelectedIndex; ;
-            var estado = lbEstado.SelectedIndex;
-            var fichaMedica = lbFichaMedica.SelectedIndex;
-            var carnet = lbCarnet.SelectedIndex;
-
-            try
+            if (pbxAlumno.Image != null)
             {
-                oSinergiaDB.Add(txtApellido.Text, txtNombre.Text, txtDni.Text, txtDireccion.Text, txtTelefono.Text, Convert.ToString(dtpFecha.Value), estado, Convert.ToInt32(txtAsistencias.Text), pago, Convert.ToInt32(txtNumeroAlumno.Text),/* ms.GetBuffer()*/ fichaMedica, carnet);
-                this.Close();
 
+                string fname = txtDni.Text + ".jpg";
+                string folder = "C:\\Fotos";
+                string pathString = System.IO.Path.Combine(folder, fname);
+                Image a = pbxAlumno.Image;
+                a.Save(pathString);
+
+
+
+
+                var pago = lbPago.SelectedIndex; ;
+                var estado = lbEstado.SelectedIndex;
+                var fichaMedica = lbFichaMedica.SelectedIndex;
+                var carnet = lbCarnet.SelectedIndex;
+
+                try
+                {
+                    oSinergiaDB.Add(txtApellido.Text, txtNombre.Text, txtDni.Text, txtDireccion.Text, txtTelefono.Text, Convert.ToString(dtpFecha.Value), estado, Convert.ToInt32(txtAsistencias.Text), pago, Convert.ToInt32(txtNumeroAlumno.Text),/* ms.GetBuffer()*/ fichaMedica, carnet, pathString);
+                    this.Close();
+
+                }
+
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Ocurrio un error al guardar " + ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-
-                MessageBox.Show("Ocurrio un error al guardar " + ex.Message);
+                MessageBox.Show("Elija una Imagen");
             }
 
 
