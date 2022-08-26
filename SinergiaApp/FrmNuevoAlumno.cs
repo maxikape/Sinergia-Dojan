@@ -24,6 +24,7 @@ namespace SinergiaApp
         {
 
         }
+      
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -83,7 +84,7 @@ namespace SinergiaApp
         {
             var vr = !string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrEmpty(txtApellido.Text) && !string.IsNullOrEmpty(txtDni.Text) &&
                 !string.IsNullOrEmpty(txtDireccion.Text) && !string.IsNullOrEmpty(txtTelefono.Text) && !string.IsNullOrEmpty(txtAsistencias.Text)
-                && !string.IsNullOrEmpty(txtNumeroAlumno.Text);
+                && !string.IsNullOrEmpty(txtNumeroAlumno.Text) ;
             btnAgregar.Enabled = vr;
 
         }

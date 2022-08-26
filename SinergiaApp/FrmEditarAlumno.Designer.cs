@@ -351,6 +351,7 @@ namespace SinergiaApp
             this.Controls.Add(this.label1);
             this.Name = "FrmEditarAlumno";
             this.Text = "FrmEditarAlumno";
+            this.Load += new System.EventHandler(this.FrmEditarAlumno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

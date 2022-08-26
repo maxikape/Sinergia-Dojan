@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 
@@ -19,6 +20,8 @@ namespace SinergiaApp
         //Validaciones validar = new Validaciones();
 
 
+        SinergiaDB oSinergiaDB = new SinergiaDB();
+
         private void btnEditar_Click(object sender, System.EventArgs e)
         {
 
@@ -27,6 +30,7 @@ namespace SinergiaApp
             var estado = lbEstado.SelectedIndex;
             var fichaMedica = lbFichaMedica.SelectedIndex;
             var carnet = lbCarnet.SelectedIndex;
+
 
 
             oSinergiaDB.Edit(Convert.ToInt32(txtId.Text),txtApellido.Text, txtNombre.Text, txtDni.Text, txtDireccion.Text, txtTelefono.Text, Convert.ToInt32(txtNumeroAlumno.Text), estado, Convert.ToInt32(txtAsistencias.Text), pago,  fichaMedica, carnet);
@@ -75,6 +79,11 @@ namespace SinergiaApp
         {
             FrmAsistencias frmnuevoa = new FrmAsistencias(Convert.ToInt32(txtId.Text));
             //frmnuevoa.ShowDialog();
+        }
+
+        private void FrmEditarAlumno_Load(object sender, EventArgs e)
+        {
+            
         }
 
 

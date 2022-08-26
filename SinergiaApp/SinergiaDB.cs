@@ -9,7 +9,7 @@ namespace SinergiaApp
         //MIO DESKTOP-P9QCAB9
         //DESKTOP-OTU6T9I\\SQLEXPRESS
 
-        private string connectionString = "Data Source= DESKTOP-P9QCAB9;Initial Catalog= SinergiaDB;Integrated Security = True";
+        private string connectionString = "Data Source= DESKTOP-OTU6T9I\\SQLEXPRESS;Initial Catalog= SinergiaDB;Integrated Security = True";
 
         public bool Ok()
         {
