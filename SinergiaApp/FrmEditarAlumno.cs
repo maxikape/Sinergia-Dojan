@@ -30,10 +30,10 @@ namespace SinergiaApp
             var estado = lbEstado.SelectedIndex;
             var fichaMedica = lbFichaMedica.SelectedIndex;
             var carnet = lbCarnet.SelectedIndex;
+            var Foto = lblFoto.Text;
+            
 
-
-
-            oSinergiaDB.Edit(Convert.ToInt32(txtId.Text),txtApellido.Text, txtNombre.Text, txtDni.Text, txtDireccion.Text, txtTelefono.Text, Convert.ToInt32(txtNumeroAlumno.Text), estado, Convert.ToInt32(txtAsistencias.Text), pago,  fichaMedica, carnet);
+            oSinergiaDB.Edit(Convert.ToInt32(txtId.Text),txtApellido.Text, txtNombre.Text, txtDni.Text, txtDireccion.Text, txtTelefono.Text, Convert.ToInt32(txtNumeroAlumno.Text), estado, Convert.ToInt32(txtAsistencias.Text), pago,  fichaMedica, carnet, Foto);
 
             this.Close();
 
@@ -83,6 +83,8 @@ namespace SinergiaApp
 
         private void FrmEditarAlumno_Load(object sender, EventArgs e)
         {
+
+            pbxFoto.Image = Image.FromFile(lblFoto.Text);
             
         }
 

@@ -180,7 +180,17 @@ namespace SinergiaApp
 
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         //private void timer1_Tick(object sender, EventArgs e)
+        //{
+        //    this.Close();
+        //}
+
+        //private void timer1_Tick_1(object sender, EventArgs e)
         //{
         //    this.Close();
         //}

@@ -57,6 +57,7 @@ namespace SinergiaApp
             this.lbCarnet = new System.Windows.Forms.ListBox();
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblFoto = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -262,6 +263,7 @@ namespace SinergiaApp
             this.pbxFoto.Location = new System.Drawing.Point(298, 28);
             this.pbxFoto.Name = "pbxFoto";
             this.pbxFoto.Size = new System.Drawing.Size(201, 186);
+            this.pbxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxFoto.TabIndex = 50;
             this.pbxFoto.TabStop = false;
             // 
@@ -316,11 +318,21 @@ namespace SinergiaApp
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lblFoto
+            // 
+            this.lblFoto.AutoSize = true;
+            this.lblFoto.Location = new System.Drawing.Point(453, 277);
+            this.lblFoto.Name = "lblFoto";
+            this.lblFoto.Size = new System.Drawing.Size(41, 13);
+            this.lblFoto.TabIndex = 59;
+            this.lblFoto.Text = "label13";
+            // 
             // FrmEditarAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 450);
+            this.Controls.Add(this.lblFoto);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.lbFichaMedica);
@@ -387,5 +399,6 @@ namespace SinergiaApp
         public System.Windows.Forms.ListBox lbCarnet;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Label lblFoto;
     }
 }

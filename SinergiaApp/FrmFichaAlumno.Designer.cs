@@ -29,6 +29,7 @@ namespace SinergiaApp
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFichaAlumno));
             this.lblPago = new System.Windows.Forms.Label();
             this.lblAsistencias = new System.Windows.Forms.Label();
@@ -46,6 +47,7 @@ namespace SinergiaApp
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -257,6 +259,12 @@ namespace SinergiaApp
             this.pictureBox3.TabIndex = 24;
             this.pictureBox3.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 4000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmFichaAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -308,5 +316,6 @@ namespace SinergiaApp
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        public System.Windows.Forms.Timer timer1;
     }
 }

@@ -87,7 +87,8 @@ namespace SinergiaApp
 
             frmE.lbFichaMedica.SelectedIndex = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells[11].Value);
             frmE.lbCarnet.SelectedIndex = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells[12].Value);
-            //frmE.pbxFoto.Image = Convert.ToString(dgvAlumnos.CurrentRow.Cells[13]);
+
+            frmE.lblFoto.Text = Convert.ToString(dgvAlumnos.CurrentRow.Cells[13].Value.ToString());
 
 
 
