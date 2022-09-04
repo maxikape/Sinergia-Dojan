@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
+using System.Runtime.Remoting.Contexts;
 using System.Windows.Forms;
 
 
@@ -24,16 +27,27 @@ namespace SinergiaApp
 
         private void btnEditar_Click(object sender, System.EventArgs e)
         {
+            //string fname = txtDni.Text + ".jpg" ;
+            //string folder = "C:\\Fotos";
+
+            //string pathString = System.IO.Path.Combine(folder, fname);
+           
+            //Image a = pbxFoto.Image;
+            ////pbxFoto.Image = null;
+            ////File.Delete(pathString2);
+            //a.Save(pathString);
+
+            
 
             SinergiaDB oSinergiaDB = new SinergiaDB();
             var pago = lbPago.SelectedIndex; ;
             var estado = lbEstado.SelectedIndex;
             var fichaMedica = lbFichaMedica.SelectedIndex;
             var carnet = lbCarnet.SelectedIndex;
-            var Foto = lblFoto.Text;
+            
             
 
-            oSinergiaDB.Edit(Convert.ToInt32(txtId.Text),txtApellido.Text, txtNombre.Text, txtDni.Text, txtDireccion.Text, txtTelefono.Text, Convert.ToInt32(txtNumeroAlumno.Text), estado, Convert.ToInt32(txtAsistencias.Text), pago,  fichaMedica, carnet, Foto);
+            oSinergiaDB.Edit(Convert.ToInt32(txtId.Text),txtApellido.Text, txtNombre.Text, txtDni.Text, txtDireccion.Text, txtTelefono.Text, Convert.ToInt32(txtNumeroAlumno.Text), estado, Convert.ToInt32(txtAsistencias.Text), pago,  fichaMedica, carnet/*, pathString*/);
 
             this.Close();
 
@@ -85,7 +99,24 @@ namespace SinergiaApp
         {
 
             pbxFoto.Image = Image.FromFile(lblFoto.Text);
-            
+
+        }
+
+        private void pbxFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            //dialog result es el resultado
+            PictureBox p = sender as PictureBox;
+            if (p != null)
+            {
+                open.Filter = "(*.jpg;*) | *.jpg;*";
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    p.Image = Image.FromFile(open.FileName);
+                    
+                }
+            }
+           
         }
 
 

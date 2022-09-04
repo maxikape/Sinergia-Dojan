@@ -266,6 +266,7 @@ namespace SinergiaApp
             this.pbxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxFoto.TabIndex = 50;
             this.pbxFoto.TabStop = false;
+            this.pbxFoto.Click += new System.EventHandler(this.pbxFoto_Click);
             // 
             // label11
             // 
@@ -326,6 +327,7 @@ namespace SinergiaApp
             this.lblFoto.Size = new System.Drawing.Size(41, 13);
             this.lblFoto.TabIndex = 59;
             this.lblFoto.Text = "label13";
+            this.lblFoto.Visible = false;
             // 
             // FrmEditarAlumno
             // 

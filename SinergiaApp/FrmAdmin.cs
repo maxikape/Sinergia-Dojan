@@ -76,7 +76,7 @@ namespace SinergiaApp
             frmE.txtDni.Text = dgvAlumnos.CurrentRow.Cells[3].Value.ToString();
             frmE.txtDireccion.Text = dgvAlumnos.CurrentRow.Cells[4].Value.ToString();
             frmE.txtTelefono.Text = dgvAlumnos.CurrentRow.Cells[5].Value.ToString();
-            frmE.txtNumeroAlumno.Text = dgvAlumnos.CurrentRow.Cells[6].Value.ToString();
+            frmE.txtNumeroAlumno.Text = dgvAlumnos.CurrentRow.Cells[7].Value.ToString();
 
             frmE.lbEstado.SelectedIndex = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells[8].Value);
 

@@ -9,7 +9,7 @@ namespace SinergiaApp
         //MIO DESKTOP-P9QCAB9
         //DESKTOP-OTU6T9I\\SQLEXPRESS
 
-        private string connectionString = "Data Source= DESKTOP-P9QCAB9;Initial Catalog= SinergiaDB;Integrated Security = True";
+        private string connectionString = "Data Source= DESKTOP-OTU6T9I\\SQLEXPRESS;Initial Catalog= SinergiaDB;Integrated Security = True";
 
         public bool Ok()
         {
@@ -130,10 +130,10 @@ namespace SinergiaApp
 
         //editar un alumno 
 
-        public void Edit(int Id, string Apellido, string Nombre, string Dni, string Direccion, string Telefono, int NumeroAlumno, int Estado, int Asistencias, int Pago, int FichaMedica, int Carnet, string Foto)
+        public void Edit(int Id, string Apellido, string Nombre, string Dni, string Direccion, string Telefono, int NumeroAlumno, int Estado, int Asistencias, int Pago, int FichaMedica, int Carnet/*, string Foto*/)
         {
             string query = "UPDATE Alumnos SET Apellido=@Apellido, Nombre = @Nombre , Dni = @Dni, Direccion= @Direccion," +
-                "Telefono=@Telefono, Estado= @Estado, Asistencias = @Asistencias , Pago = @Pago ,  NumeroAlumno = @NumeroAlumno, FichaMedica = @FichaMedica, Carnet = @Carnet, Foto = @Foto " +
+                "Telefono=@Telefono, Estado= @Estado, Asistencias = @Asistencias , Pago = @Pago ,  NumeroAlumno = @NumeroAlumno, FichaMedica = @FichaMedica, Carnet = @Carnet/*, Foto = @Foto*/" +
                 "WHERE Id = @Id";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -155,7 +155,7 @@ namespace SinergiaApp
                 comando.Parameters.AddWithValue("@NumeroAlumno", @NumeroAlumno);
                 comando.Parameters.AddWithValue("@FichaMedica", FichaMedica);
                 comando.Parameters.AddWithValue("@Carnet", Carnet);
-                comando.Parameters.AddWithValue("@Foto", Foto);
+                //comando.Parameters.AddWithValue("@Foto", Foto);
 
 
                 try
