@@ -30,8 +30,8 @@ namespace SinergiaApp
                 lblNombre.Text = alumno.Nombre;
                 lblApellido.Text = alumno.Apellido;
                 lblDni.Text = alumno.Dni;
-                
-                pictureBox2.Image = Image.FromFile(alumno.Foto);
+                //999
+                //pictureBox2.Image = Image.FromFile(alumno.Foto);
 
                 var ficha = alumno.FichaMedica;
                 var carnet = alumno.Carnet;

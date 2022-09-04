@@ -9,7 +9,7 @@ namespace SinergiaApp
         //MIO DESKTOP-P9QCAB9
         //DESKTOP-OTU6T9I\\SQLEXPRESS
 
-        private string connectionString = "Data Source= DESKTOP-OTU6T9I\\SQLEXPRESS;Initial Catalog= SinergiaDB;Integrated Security = True";
+        private string connectionString = "Data Source= //DESKTOP-OTU6T9I\\SQLEXPRESS;Initial Catalog= SinergiaDB;Integrated Security = True";
 
         public bool Ok()
         {
@@ -217,8 +217,8 @@ namespace SinergiaApp
 
                     Oalumnos.FichaMedica = reader.GetInt32(12);
                     Oalumnos.Carnet = reader.GetInt32(11);
-
-                    Oalumnos.Foto = reader.GetString(13);
+                    //999
+                    //Oalumnos.Foto = reader.GetString(13);
 
 
 
