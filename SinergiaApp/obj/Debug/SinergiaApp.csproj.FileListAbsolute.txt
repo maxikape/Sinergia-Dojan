@@ -19,7 +19,6 @@ C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\bin\Debug\System.Buffers.xml
 C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\bin\Debug\System.Memory.xml
 C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\obj\Debug\SinergiaApp.csproj.AssemblyReference.cache
 C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\obj\Debug\SinergiaApp.Admin.resources
 C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\obj\Debug\SinergiaApp.Form1.resources
 C:\Users\tomtr\source\repos\SinergiaApp\SinergiaApp\obj\Debug\SinergiaApp.FrmAdmin.resources
